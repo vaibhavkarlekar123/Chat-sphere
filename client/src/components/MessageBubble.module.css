@@ -1,0 +1,87 @@
+.row {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  animation: fadeIn 0.2s ease;
+  margin-bottom: 2px;
+}
+
+.own {
+  flex-direction: row-reverse;
+}
+
+.other {
+  flex-direction: row;
+}
+
+.avatarSlot {
+  flex-shrink: 0;
+  width: 30px;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 1.5px solid var(--border);
+  object-fit: cover;
+}
+
+.avatarSpacer {
+  width: 30px;
+}
+
+.bubbleGroup {
+  display: flex;
+  flex-direction: column;
+  max-width: 68%;
+  gap: 3px;
+}
+
+.own .bubbleGroup {
+  align-items: flex-end;
+}
+
+.other .bubbleGroup {
+  align-items: flex-start;
+}
+
+.senderName {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 500;
+  padding-left: 12px;
+  margin-bottom: 1px;
+}
+
+.bubble {
+  padding: 9px 14px;
+  border-radius: 18px;
+  word-break: break-word;
+  line-height: 1.5;
+}
+
+.bubbleOwn {
+  background: var(--msg-out);
+  border-bottom-right-radius: 4px;
+  color: var(--text-primary);
+}
+
+.bubbleOther {
+  background: var(--msg-in);
+  border-bottom-left-radius: 4px;
+  color: var(--text-primary);
+  border: 1px solid var(--border-subtle);
+}
+
+.text {
+  font-size: 14px;
+  white-space: pre-wrap;
+}
+
+.time {
+  font-size: 10px;
+  color: var(--text-muted);
+  padding: 0 4px;
+}
