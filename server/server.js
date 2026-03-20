@@ -90,6 +90,14 @@ io.on("connection", (socket) => {
   });
 });
 
+const path = require("path");
+
+// Add this AFTER all your routes
+app.use(express.static(path.join(__dirname, "../client/build")));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/build/index.html"));
+});
+
 // MongoDB Connection
 mongoose
   .connect(process.env.MONGO_URI)
